@@ -1,0 +1,3 @@
+export const RECIVE_CODES = 'RECIVE_CODES'
+export const LOADING_CODES = 'LOADING_CODES'
+export const CODES_FAILED = 'CODES_FAILED'
