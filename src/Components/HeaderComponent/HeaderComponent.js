@@ -8,16 +8,22 @@ import {
   NavLink,
   Collapse,
 } from "shards-react";
-import { NavbarStyle, drescodeLogoOneStyle, fontStyleOne } from "./Styles";
+import {
+  NavbarStyle,
+  drescodeLogoOneStyle,
+  fontStyleOne,
+  NavItemStyleOne,
+} from "./Styles";
 import drescodeLogoOne from "../../Assets/drescodeLogo_1.svg";
 import loginIcon from "../../Assets/loginIcon.svg";
+import SocialMediaComponent from "../SicalMediaComponent/SocialMediaComponent";
 
 const HeaderComponent = () => {
   const [collapseOpen, setCollapseOpen] = useState(false);
 
   return (
     <Navbar style={NavbarStyle} type="dark" expand="md">
-      <NavbarBrand href="#">
+      <NavbarBrand href="/">
         <img
           style={drescodeLogoOneStyle}
           src={drescodeLogoOne}
@@ -28,9 +34,14 @@ const HeaderComponent = () => {
 
       <Collapse open={collapseOpen} navbar>
         <Nav navbar className="ml-auto">
-          <NavItem style={{ margin: "0 50px 0 0" }}>
+          <NavItem style={NavItemStyleOne}>
             <NavLink active href="#" style={fontStyleOne}>
               Browse codes
+            </NavLink>
+          </NavItem>
+          <NavItem style={NavItemStyleOne}>
+            <NavLink active href="#" style={fontStyleOne}>
+              <SocialMediaComponent />
             </NavLink>
           </NavItem>
           <NavItem>

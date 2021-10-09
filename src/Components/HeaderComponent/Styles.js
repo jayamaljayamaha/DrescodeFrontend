@@ -11,3 +11,7 @@ export const fontStyleOne = {
   fontSize: 18,
   padding: "20px 0",
 };
+
+export const NavItemStyleOne = {
+  margin: "0 100px 0 0",
+};
