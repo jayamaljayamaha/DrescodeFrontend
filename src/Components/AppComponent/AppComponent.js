@@ -3,6 +3,7 @@ import HeaderComponent from "../HeaderComponent/HeaderComponent";
 //import { useSelector } from 'react-redux'
 import WebFont from "webfontloader";
 import FooterComponent from "../FooterComponent/FooterComponent";
+import BodyComponent from "../BodyComponent/BodyComponent";
 
 const AppComponent = () => {
   //const codes = useSelector((state) => state.codes)
@@ -17,6 +18,7 @@ const AppComponent = () => {
   return (
     <div>
       <HeaderComponent />
+      <BodyComponent />
       <FooterComponent />
     </div>
   );
