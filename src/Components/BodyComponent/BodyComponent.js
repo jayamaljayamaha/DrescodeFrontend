@@ -1,12 +1,14 @@
 import React from "react";
-import SearchComponent from "../SearchComponent/SearchComponent";
+import SearchCodesComponent from "../SearchCodesComponent/SearchCodesComponent";
 import { BodyStyle } from "./Styles";
-
+import { BrowserRouter, Route } from "react-router-dom";
 const BodyComponent = () => {
   return (
-    <div style={BodyStyle} className="body">
-      <SearchComponent />
-    </div>
+    <BrowserRouter>
+      <div style={BodyStyle} className="body">
+        <Route path="/" component={SearchCodesComponent} />
+      </div>
+    </BrowserRouter>
   );
 };
 
