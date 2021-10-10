@@ -1,5 +1,5 @@
 export const SearchBarStyles = {
-  margin: "30px 0px",
+  margin: "30px 0px 20px 0",
   fontFamily: "Rubik",
 };
 
@@ -37,4 +37,8 @@ export const searchBarButtonStyles = {
   width: "100%",
   fontFamily: "Rubik",
   fontSize: 18,
+};
+
+export const ColStyle = {
+  padding: 0,
 };

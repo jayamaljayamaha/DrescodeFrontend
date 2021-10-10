@@ -5,6 +5,9 @@ import {
   InputGroupAddon,
   Button,
   InputGroupText,
+  Container,
+  Row,
+  Col,
 } from "shards-react";
 import {
   SearchBarStyles,
@@ -13,8 +16,10 @@ import {
   FormInputStyles,
   searchBarButtonStyles,
   searchBarPrefixButtonStyles,
+  ColStyle,
 } from "./Styles";
 import SearchIcon from "../../Assets/Icons/searchIcon.svg";
+import DropDownComponent from "../DropDownComponent/DropDownComponent";
 
 const SearchComponent = () => {
   return (
@@ -35,6 +40,21 @@ const SearchComponent = () => {
           </Button>
         </InputGroupAddon>
       </InputGroup>
+      <div className="search-filters">
+        <Container fluid>
+          <Row>
+            <Col style={ColStyle} sm="4" md="4" lg="3" xl="2">
+              <DropDownComponent type="Language" />
+            </Col>
+            <Col style={ColStyle} sm="4" md="4" lg="3" xl="2">
+              <DropDownComponent type="Category" />
+            </Col>
+            <Col style={ColStyle} sm="4" md="4" lg="3" xl="2">
+              <DropDownComponent type="Sub Category" />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };
