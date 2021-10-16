@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FormInput,
   InputGroup,
@@ -20,8 +20,25 @@ import {
 } from "./Styles";
 import SearchIcon from "../../Assets/Icons/searchIcon.svg";
 import DropDownComponent from "../DropDownComponent/DropDownComponent";
+import { useHistory } from "react-router-dom";
 
 const SearchComponent = () => {
+  const [searchValue, setSearchValue] = useState("");
+  const history = useHistory();
+
+  const handleSearch = () => {
+    const tags = searchValue.split(" ").join();
+    if (history.location.pathname === "/codes") {
+      history.replace(`/codes?tags=${tags}`);
+    } else {
+      history.push(`/codes?tags=${tags}`);
+    }
+  };
+
+  const handleChange = (event) => {
+    setSearchValue(event.target.value);
+  };
+
   return (
     <div>
       <InputGroup style={SearchBarStyles}>
@@ -33,9 +50,14 @@ const SearchComponent = () => {
             <img style={searchIconStyle} src={SearchIcon} alt="Search Icon" />
           </InputGroupText>
         </InputGroupAddon>
-        <FormInput style={FormInputStyles} placeholder="Search Codes" />
+        <FormInput
+          value={searchValue}
+          onChange={handleChange}
+          style={FormInputStyles}
+          placeholder="Search Codes"
+        />
         <InputGroupAddon style={searchBarPrefixButtonStyles} type="append">
-          <Button pill style={searchBarButtonStyles}>
+          <Button pill style={searchBarButtonStyles} onClick={handleSearch}>
             Search
           </Button>
         </InputGroupAddon>

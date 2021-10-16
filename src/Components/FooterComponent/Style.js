@@ -1,6 +1,6 @@
 export const FooterStyle = {
   backgroundColor: "#E3475C",
-  position: "absolute",
+  position: "relative",
   bottom: "0px",
 };
 

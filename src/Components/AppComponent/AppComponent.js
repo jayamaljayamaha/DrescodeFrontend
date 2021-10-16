@@ -10,7 +10,7 @@ const AppComponent = () => {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Rubik:400", "sans-serif"],
+        families: ["Rubik:400", "Titillium Web:600", "sans-serif"],
       },
     });
   }, []);
